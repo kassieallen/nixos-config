@@ -5,6 +5,7 @@
     ./hypr                  # Hyprland & friends        # SUS
     ./nvim                  # Neovim config
     ./gaming.nix            # Packages related to gaming
+    ./git.nix               # Git and gh CLI
     ./gtkqt.nix             # GTK and QT themes                 # SUS
     ./kitty.nix             # Kitty terminal
     ./packages.nix          # Miscellaneous packages
