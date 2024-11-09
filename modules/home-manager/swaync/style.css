@@ -1,0 +1,117 @@
+* {
+  font-family: JetBrainsMono Nerd Font;
+}
+
+.control-center {
+  background: alpha(#131314, 0.9);
+  border: 2px solid #1b1b1d;
+  border-radius: 8px;
+}
+
+
+.widget-buttons-grid {
+  font-size: 36px;
+  background: transparent;
+}
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  padding: 6px 61px;
+  background: transparent;
+  border-radius: 8px;
+}
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  color: #282828;
+  background: #2a2a2d;
+}
+.widget-buttons-grid>flowbox>flowboxchild:last-child {
+  border-left: 2px solid #989899;
+}
+.widget-buttons-grid>flowbox>flowboxchild:first-child {
+  border-right: 2px solid #989899;
+}
+
+
+.widget-dnd {
+  color: #989899;
+  background: transparent;
+  font-size: 24px;
+}
+.widget-dnd>switch {
+  background: #90b99f;
+  border-radius: 16px;
+}
+.widget-dnd > switch:hover {
+  background: #95c2a6;
+}
+.widget-dnd>switch:checked {
+  background: #ea83a5;
+}
+.widget-dnd > switch:checked:hover {
+  background: #f591b2;
+}
+
+
+.widget-title {
+  color: #989899;
+  font-size: 24px;
+  border-top: 2px solid #989899;
+  padding: 16px 0;
+}
+.widget-title button {
+  border-radius: 16px;
+  color: #383838;
+  background: #e6b99d;
+  padding: 0 16px;
+  font-size: 24px
+}
+.widget-title button:hover {
+  background: #f0c5a9;
+}
+.widget-title button:active {
+  background: #f591b2;
+}
+
+
+.notification {
+  background: #131314;
+  border: 2px solid #1b1b1d;
+  border-radius: 8px;
+  color: #c9c7cd;
+  opacity: 0.9;
+}
+
+.notification-content {
+  background: transparent;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.notification-action {
+  background: #131314;
+  border: 2px solid #1b1b1d;
+  border-radius: 8px;
+  color: #c9c7cd;
+  opacity: 0.9;
+}
+
+.notification-action:hover {
+  background: #2a2a2d;
+  border-radius: 8px;
+}
+
+.notification-default-action {
+  border-radius: 8px;
+}
+
+
+.close-button {
+  border: none;
+  margin: 4px;
+  background: #ea83a5;
+  color: #131314;
+}
+
+
+.control-center-list-placeholder {
+  color: #989899;
+  opacity: 1;
+}
