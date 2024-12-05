@@ -1,5 +1,5 @@
 # Bootloader configuration
-{ config, lib, ... }: {
+{ config, lib, pkgs, ... }: {
   boot.loader = {
     efi.canTouchEfiVariables = true;
     systemd-boot = {
@@ -37,5 +37,13 @@
     "d /persist/home/kassie/ 0700 kassie users -" # Owned by that user
   ];
 
-  services.displayManager.ly.enable = true;
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd \"dbus-run-session river\"";
+        user = "greeter";
+      };
+    };
+  };
 }

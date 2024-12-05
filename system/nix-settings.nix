@@ -27,6 +27,6 @@
     enable = true;
     libraries = with pkgs; [  ];
   };
-
+  services.dbus.enable = true;
   system.stateVersion = "24.05"; # Probably shouldn't touch this...
 }
