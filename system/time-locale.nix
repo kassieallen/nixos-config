@@ -1,18 +1,20 @@
 # This is the time and place
-{
+let
+  UTF = "en_US.UTF-8";
+in {
   time.timeZone = "America/New_York";
   i18n = {
-    defaultLocale = "en_US.UTF-8";
+    defaultLocale = UTF;
     extraLocaleSettings = {
-      LC_ADDRESS = "en_US.UTF-8";
-      LC_IDENTIFICATION = "en_US.UTF-8";
-      LC_MEASUREMENT = "en_US.UTF-8";
-      LC_MONETARY = "en_US.UTF-8";
-      LC_NAME = "en_US.UTF-8";
-      LC_NUMERIC = "en_US.UTF-8";
-      LC_PAPER = "en_US.UTF-8";
-      LC_TELEPHONE = "en_US.UTF-8";
-      LC_TIME = "en_US.UTF-8";
+      LC_ADDRESS = UTF;
+      LC_IDENTIFICATION = UTF;
+      LC_MEASUREMENT = UTF;
+      LC_MONETARY = UTF;
+      LC_NAME = UTF;
+      LC_NUMERIC = UTF;
+      LC_PAPER = UTF;
+      LC_TELEPHONE = UTF;
+      LC_TIME = UTF;
     };
   };
 }
