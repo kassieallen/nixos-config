@@ -8,6 +8,7 @@
 
       ".config/foot"
       ".config/fuzzel"
+      ".config/gh" # kinda need this one
       ".config/nixos"
       ".config/nvim"
       ".config/river"
