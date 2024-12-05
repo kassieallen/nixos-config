@@ -16,7 +16,7 @@
       ".local/share/flatpak"
       ".local/share/nvim"
       ".var/app"
-      ".mozzila"
+      ".mozilla"
       "Documents"
       "Downloads"
       "Music"

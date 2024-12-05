@@ -17,6 +17,7 @@
       grim            # Used with slurp for screenshots
       hexdump         # Hex tool
       lazygit         # Helpful git tool
+      libnotify       # Notifications!
       mpv             # Media player
       pamixer         # Audio controller
       playerctl       # Media controller
@@ -31,10 +32,10 @@
       # GUI
       audacity        # Audio editor and recorder
       davinci-resolve # Video editin'
-      firefox         # Internet browser
       foot            # Terminal emulator
       fuzzel          # Application launcher
       libreoffice     # Office suite
+      mako            # Notification daemon
       obs-studio      # Screen & audio recording software
       prismlauncher   # Minecraft: java edition
       yambar          # Status panel
