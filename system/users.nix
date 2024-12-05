@@ -5,7 +5,8 @@
   users.users = { 
     kassie = {
       isNormalUser = true;
-      initialPassword = "12345";
+      # initialPassword = "12345";
+      hashedPasswordFile = "/persist/passwords/user";
       extraGroups = [ "networkmanager" "wheel" ];
     };
   };
@@ -14,6 +15,5 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users."kassie" = import ../home;
-    # passwordFile = "/persist/passwords/user";
   };
 }
