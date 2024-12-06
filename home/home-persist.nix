@@ -13,9 +13,12 @@
       ".config/nvim"
       ".config/river"
       ".config/yambar"
+      ".config/yazi"
 
       ".local/share/flatpak"
       ".local/share/nvim"
+      ".local/share/Steam"
+      ".local/share/PrismLauncher"
       ".var/app"
       ".mozilla"
       "Documents"

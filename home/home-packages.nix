@@ -8,6 +8,7 @@
     stateVersion = "24.05";
     packages = with pkgs; [
       # CLI
+      appimage-run    # AppImage compatibility
       btop            # Resource monitor
       cbonsai         # Pretty tree :3
       fastfetch       # System information tool
@@ -38,7 +39,8 @@
       mako            # Notification daemon
       obs-studio      # Screen & audio recording software
       prismlauncher   # Minecraft: java edition
-      steam           # Game library
+      steamcmd
+      steam-tui
       yambar          # Status panel
     ];
   };
@@ -55,6 +57,7 @@
       "com.spotify.Client"
       "dev.vencord.Vesktop"
       "io.mrarm.mcpelauncher"
+      "io.github.everestapi.Olympus"
     ];
 #     overrides = {
 #       global = {
