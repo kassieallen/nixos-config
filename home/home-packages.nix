@@ -38,6 +38,7 @@
       mako            # Notification daemon
       obs-studio      # Screen & audio recording software
       prismlauncher   # Minecraft: java edition
+      steam           # Game library
       yambar          # Status panel
     ];
   };

@@ -15,7 +15,6 @@
     ./printing.nix
     ./security.nix
     ./sound.nix
-    ./steam.nix
     ./time-locale.nix
     ./users.nix
     ./xdgPortal.nix
