@@ -5,5 +5,6 @@
     ./git.nix
     ./nvim.nix
     ./starship.nix
+    ./steam.nix
   ];
 }
