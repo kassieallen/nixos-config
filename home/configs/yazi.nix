@@ -1,5 +1,5 @@
 {
-  environment.etc."yazi/yazi.toml".text = ''
+  home.file.".config/yazi/yazi.toml".text = ''
     [manager]
     show_hidden = true
   '';

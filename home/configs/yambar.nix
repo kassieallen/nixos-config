@@ -1,5 +1,5 @@
 {
-  environment.etc."yambar/config.yml".text = ''
+  home.file.".config/yambar/config.yml".text = ''
     jbm: &jbm JetBrainsMono Nerd Font:pixelsize=14
     bg: &bg {stack: [{background: {color: 2a2a2de6}}, {underline: {size: 2, color: 757581ff}}]}
 

@@ -1,5 +1,5 @@
 {
-  environment.etc."fuzzel/fuzzel.ini".text = ''
+  home.file.".config/fuzzel/fuzzel.ini".text = ''
     font=JetBrainsMono Nerd Font
     prompt=
     icon-theme=Adwaita
