@@ -17,7 +17,6 @@
   programs = {
     dconf.enable = true;
     git.enable = true;
-    river.enable = true;
   };
 
   services = {

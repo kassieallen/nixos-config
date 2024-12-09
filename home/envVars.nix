@@ -3,6 +3,7 @@
   home.sessionVariables = {
     BROWSER = "firefox";
     EDITOR = "nvim";
+    TERM = "foot";
     NIXOS_OZONE_WL = "1";
     LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
