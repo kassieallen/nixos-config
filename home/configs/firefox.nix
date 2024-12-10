@@ -1,4 +1,4 @@
-# Firefox configuration
+# Home-manager firefox configuration
 { config, pkgs, ... }:
 let
   lock-false = {
