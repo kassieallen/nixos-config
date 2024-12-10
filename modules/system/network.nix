@@ -1,7 +1,7 @@
 # Networking configuration
 {
   networking = {
-    hostName = "NixOS";
+    # hostName = "NixOS";
     networkmanager = {
       enable = true;
     };

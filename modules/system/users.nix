@@ -15,5 +15,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users."kassie" = import ../home-manager;
+    useUserPackages = true;
+    useGlobalPkgs = true;
   };
 }

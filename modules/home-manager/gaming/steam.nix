@@ -1,23 +1,16 @@
 # Home-manager steam configuration
-{ config, lib, pkgs, ... }: {
-  options = {
-    steam.enable = 
-      lib.mkEnableOption "enables Steam";
-  };
-
-  config = lib.mkIf config.steam.enable {
-    home = {
-      packages = with pkgs; [
-        steam-tui
-        steamcmd
+{ lib, pkgs, osConfig, ... }: {
+  home = lib.mkIf (osConfig.networking.hostName == "NixOS Desktop") {
+    packages = with pkgs; [
+      steam-tui
+      steamcmd
+    ];
+    persistence."/persist/home/kassie" = {
+      directories = [
+        ".steam"
+        ".local/share/Steam"
+        ".local/share/vulkan"
       ];
-      persistence."/persist/home/kassie" = {
-        directories = [
-          ".steam"
-          ".local/share/Steam"
-          ".local/share/vulkan"
-        ];
-      };
     };
   };
 }

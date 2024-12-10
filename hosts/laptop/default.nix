@@ -4,4 +4,6 @@
     ./hardware-configuration.nix
     ../../modules/system
   ];
+
+  networking.hostName = "NixOS Laptop";
 }
