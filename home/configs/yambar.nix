@@ -54,6 +54,15 @@
                     map:
                       <<: *river_base
                       deco: {underline: {size: 2, color: 2a2a2dff}}
+      center:
+        - foreign-toplevel:
+            content:
+              map:
+                conditions:
+                  ~activated: {empty: {}}
+                  activated:
+                    - string: {text: "{app-id}", foreground: aca1cfff}
+                    - string: {text: ": {title}"}
       right:
         - pulse:
             content:
