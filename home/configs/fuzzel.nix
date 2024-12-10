@@ -1,3 +1,4 @@
+# Home-manager fuzzel configuration
 {
   home.file.".config/fuzzel/fuzzel.ini".text = ''
     font=JetBrainsMono Nerd Font

@@ -1,3 +1,4 @@
+# Home-manager foot configuration
 {
   programs.foot = {
     enable = true;

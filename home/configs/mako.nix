@@ -1,4 +1,4 @@
-# Mako notification daemon configuration
+# Home-manager mako configuration
 {
   home.file.".config/mako/config".text = ''
     font=JetBrainsMono Nerd Font 10

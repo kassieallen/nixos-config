@@ -1,3 +1,4 @@
+# Home-manager riverWM configuration
 { pkgs, ... }:
 let
   wallpaper = "$HOME/Pictures/wallpapers/forest.jpg";

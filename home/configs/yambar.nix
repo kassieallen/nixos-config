@@ -1,3 +1,4 @@
+# Home-manager yambar configuration
 {
   home.file.".config/yambar/config.yml".text = ''
     jbm: &jbm JetBrainsMono Nerd Font:pixelsize=14

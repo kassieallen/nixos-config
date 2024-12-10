@@ -1,4 +1,4 @@
-# Starship configuration
+# Home-manager starship configuration
 { lib, ... }: {
   programs = {
     bash.enable = true;
