@@ -61,8 +61,7 @@
                 conditions:
                   ~activated: {empty: {}}
                   activated:
-                    - string: {text: "{app-id}", foreground: aca1cfff}
-                    - string: {text: ": {title}"}
+                    - string: {text: "{title}", foreground: aca1cfff}
       right:
         - pulse:
             content:

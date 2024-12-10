@@ -1,0 +1,4 @@
+# Home-manager steam configuration
+{ ... }: {
+  #
+}

@@ -14,6 +14,6 @@
   programs.fuse.userAllowOther = true;
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
-    users."kassie" = import ../home;
+    users."kassie" = import ../home-manager;
   };
 }
