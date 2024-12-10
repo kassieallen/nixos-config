@@ -1,6 +1,6 @@
 {
   imports = [
-    ./mc.nix
+    ./mcje.nix
     ./steam.nix
   ];
 }

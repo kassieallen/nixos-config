@@ -2,7 +2,6 @@
 { inputs, ... }: {
   imports = [
     inputs.disko.nixosModules.default
-    ../hardware-configuration.nix
     ./base-packages.nix
     ./base-persist.nix
     ./boot.nix
