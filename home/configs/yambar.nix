@@ -10,7 +10,7 @@
       spacing: 2
       margin: 0
       layer: bottom
-      foreground: eeeeeeff
+      foreground: c9c7cdff
       background: 131314e6
 
       left:
@@ -33,7 +33,7 @@
                   state == urgent:
                     map:
                       <<: *river_base
-                      deco: {background: {color: f38ba8ff}}
+                      deco: {background: {color: ea83a5ff}}
                   state == focused:
                     map:
                       <<: *river_base

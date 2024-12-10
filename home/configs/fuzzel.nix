@@ -23,11 +23,11 @@
     match=c9c7cdff
     selection=1b1b1de6
     selection-text=c9c7cdff
-    selection-match=f38ba8ff
+    selection-match=ea83a5ff
     border=1b1b1de6
 
     [border]
     width=2
-    radius=4
+    radius=0
   '';
 }
