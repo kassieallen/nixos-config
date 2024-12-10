@@ -32,9 +32,6 @@ in {
         riverctl map $mode None XF86AudioNext spawn 'playerctl next'
         riverctl map $mode None XF86AudioPrev spawn 'playerctl previous'
       done
-
-      # Issue Patching
-      dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
     '';
 
     settings = {
