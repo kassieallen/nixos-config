@@ -18,10 +18,15 @@
 
   outputs = { nixpkgs, ... } @inputs: {
     nixosConfigurations = {
-      kassie = nixpkgs.lib.nixosSystem {
+      desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
-        modules = [ ./system ];
+        modules = [ ./hosts/desktop ];
+      };
+      laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/laptop ];
       };
     };
   };
