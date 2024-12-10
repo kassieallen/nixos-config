@@ -13,7 +13,7 @@ let
   };
 
   mimeMap = {
-    audio = [
+    audioPlayer = [
       "audio/aac"
       "audio/mpeg"
       "audio/ogg"
