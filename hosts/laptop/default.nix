@@ -5,5 +5,5 @@
     ../../modules/system
   ];
 
-  networking.hostName = "NixOS_Laptop";
+  networking.hostName = "NixOS-Laptop";
 }

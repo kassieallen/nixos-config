@@ -2,6 +2,7 @@
 {
   imports = [
     ./configs
+    ./editing
     ./gaming
     ./envVars.nix
     ./gtk.nix

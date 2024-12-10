@@ -29,9 +29,7 @@
 
       # GUI
       audacity        # Audio editor and recorder
-      davinci-resolve # Video editin'
       libreoffice     # Office suite
-      obs-studio      # Screen & audio recording software
     ];
   };
 
