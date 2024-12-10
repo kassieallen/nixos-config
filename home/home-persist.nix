@@ -5,8 +5,7 @@
   home.persistence."/persist/home/kassie" = {
     directories = [
       ".cache/flatpak"
-      ".config/gh" # kinda need this one
-      ".config/nixos"
+      ".config/gh"
       ".config/nvim"
       ".local/share/flatpak"
       ".local/share/nvim"
