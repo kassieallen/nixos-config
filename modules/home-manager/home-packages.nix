@@ -32,7 +32,6 @@
       davinci-resolve # Video editin'
       libreoffice     # Office suite
       obs-studio      # Screen & audio recording software
-      prismlauncher   # Minecraft: java edition
     ];
   };
 
@@ -47,13 +46,7 @@
     packages = [
       "com.spotify.Client"
       "dev.vencord.Vesktop"
-      "io.mrarm.mcpelauncher"
+      # "io.mrarm.mcpelauncher"
     ];
-#     overrides = {
-#       global = {
-#         # Force wayland by default
-#         Context.sockets = [ "wayland" "!x11" "!fallback-x11" ];
-#       };
-#     };
   };
 }
