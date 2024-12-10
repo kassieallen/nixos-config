@@ -33,8 +33,6 @@
       libreoffice     # Office suite
       obs-studio      # Screen & audio recording software
       prismlauncher   # Minecraft: java edition
-      steamcmd
-      steam-tui
     ];
   };
 
@@ -50,7 +48,6 @@
       "com.spotify.Client"
       "dev.vencord.Vesktop"
       "io.mrarm.mcpelauncher"
-      "io.github.everestapi.Olympus"
     ];
 #     overrides = {
 #       global = {
