@@ -92,9 +92,4 @@ in {
       createDirectories = true;
     };
   };
-
-  home.packages = with pkgs; [ 
-    junction
-    shared-mime-info 
-  ];
 }
