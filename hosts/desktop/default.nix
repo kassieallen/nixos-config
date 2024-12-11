@@ -5,6 +5,4 @@
     ./nvidia.nix
     ../../modules/system
   ];
-
-  mcje.enable = true;
 }

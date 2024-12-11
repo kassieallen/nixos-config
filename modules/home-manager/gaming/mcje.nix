@@ -1,12 +1,14 @@
 # Home-manager minecraft configuration
 { config, lib, pkgs, ... }:
-with lib;
 let
-  cfg = config.mcje;
+  inherit (lib) mkIf mkEnableOption;
+  cfg = config.modules.gaming.mcje;
 in {
-  options.mcje.enable = lib.mkEnableOption "MCJE";
+  options.modules.gaming.mcje = {
+    enable = mkEnableOption "MCJE";
+  };
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     home {
       packages = with pkgs; [
         prismlauncher
