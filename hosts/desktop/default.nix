@@ -1,9 +1,10 @@
 # NixOS desktop configuration
-{ ... }: {
+{ config, ... }: {
   imports = [
     ./hardware-configuration.nix
+    ./nvidia.nix
     ../../modules/system
   ];
 
-  networking.hostName = "NixOS-Desktop";
+  mcje.enable = true;
 }

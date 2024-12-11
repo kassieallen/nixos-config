@@ -1,7 +1,7 @@
 # Home-manager default configuration
 {
   imports = [
-    ./configs
+    ./config
     ./editing
     ./gaming
     ./envVars.nix

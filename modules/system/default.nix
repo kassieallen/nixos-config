@@ -9,9 +9,6 @@
     ./fonts.nix
     ./network.nix
     ./nix-settings.nix
-    ./nvidia.nix
-    ./polkit.nix
-    ./printing.nix
     ./security.nix
     ./sound.nix
     ./time-locale.nix

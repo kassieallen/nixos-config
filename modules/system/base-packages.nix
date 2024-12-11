@@ -28,5 +28,6 @@
     };
     gvfs.enable = true;
     flatpak.enable = true;
+    printing.enable = true;
   };
 }
