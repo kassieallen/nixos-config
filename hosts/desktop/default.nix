@@ -5,4 +5,11 @@
     ./nvidia.nix
     ../../modules/system
   ];
+
+  # the problem...
+  modules = {
+    gaming = {
+      mcje.enable = true;
+    };
+  };
 }
