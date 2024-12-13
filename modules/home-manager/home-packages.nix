@@ -31,6 +31,11 @@
       audacity        # Audio editor and recorder
       libreoffice     # Office suite
     ];
+    persistence."/persist/home/kassie".directories = [
+      ".cache/flatpak"
+      ".local/share/flatpak"
+      ".var/app"
+    ];
   };
 
   services.flatpak = {
@@ -44,7 +49,7 @@
     packages = [
       "com.spotify.Client"
       "dev.vencord.Vesktop"
-      # "io.mrarm.mcpelauncher"
+      "io.mrarm.mcpelauncher"
     ];
   };
 }

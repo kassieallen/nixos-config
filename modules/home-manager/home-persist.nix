@@ -4,13 +4,6 @@
 
   home.persistence."/persist/home/kassie" = {
     directories = [
-      ".cache/flatpak"
-      ".config/gh"
-      ".config/nvim"
-      ".local/share/flatpak"
-      ".local/share/nvim"
-      ".var/app"
-      ".mozilla"
       "Documents"
       "Downloads"
       "Music"

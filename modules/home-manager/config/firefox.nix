@@ -74,4 +74,6 @@ in {
       };
     };
   };
+
+  home.persistence."/persist/home/kassie".directories = [ ".mozilla" ];
 }

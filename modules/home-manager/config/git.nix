@@ -1,6 +1,5 @@
 # Home-manager git configuration
 { pkgs, ... }: {
-  home.packages = [ pkgs.gh ];
   programs.git = {
     enable = true;
     userName = "kassieallen";
@@ -20,5 +19,10 @@
         navigate = true;
       };
     };
+  };
+
+  home = {
+    packages = [ pkgs.gh ];
+    persistence."/persist/home/kassie".directories = [ ".config/gh" ];
   };
 }
