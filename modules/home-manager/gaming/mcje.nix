@@ -1,5 +1,5 @@
 # Home-manager minecraft configuration
-{ config, lib, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.gaming.mcje;
@@ -9,7 +9,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home {
+    home = {
       packages = with pkgs; [
         prismlauncher
       ];
