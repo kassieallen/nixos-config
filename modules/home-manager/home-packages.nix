@@ -28,7 +28,6 @@
       yt-dlp          # Audio/video downloader
 
       # GUI
-      audacity        # Audio editor and recorder
       libreoffice     # Office suite
     ];
     persistence."/persist/home/kassie".directories = [
