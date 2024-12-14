@@ -36,14 +36,4 @@
     "d /persist/home/ 0777 root root -" # Owned by root
     "d /persist/home/kassie/ 0700 kassie users -" # Owned by that user
   ];
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd \"dbus-run-session river\"";
-        user = "greeter";
-      };
-    };
-  };
 }

@@ -29,11 +29,16 @@
 
       # GUI
       libreoffice     # Office suite
+      spotify         # Music streaming service
+      vesktop         # Discord client
     ];
     persistence."/persist/home/kassie".directories = [
       ".cache/flatpak"
+      ".cache/spotify"
+      ".config/spotify"
+      ".config/vesktop" 
       ".local/share/flatpak"
-      ".var/app"
+      ".var/app/io.mrarm.mcpelauncher"
     ];
   };
 
@@ -46,8 +51,6 @@
       }
     ];
     packages = [
-      "com.spotify.Client"
-      "dev.vencord.Vesktop"
       "io.mrarm.mcpelauncher"
     ];
   };

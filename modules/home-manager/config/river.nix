@@ -3,6 +3,14 @@
 let
   wallpaper = "$HOME/Pictures/wallpapers/forest.jpg";
 in {
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
+        exec dbus-run-session -- river
+      fi
+    '';
+  };
   wayland.windowManager.river = {
     enable = true;
     extraConfig = ''
@@ -55,10 +63,10 @@ in {
           "Super E" = "spawn 'foot -e yazi'";
           "Control+Alt Delete" = "exit";
 
-          "Super J" = "focus-view next";
-          "Super K" = "focus-view previous";
-          "Super+Shift J" = "swap next";
-          "Super+Shift K" = "swap previous";
+          "Super K" = "focus-view next";
+          "Super J" = "focus-view previous";
+          "Super+Shift K" = "swap next";
+          "Super+Shift J" = "swap previous";
           "Super Period" = "focus-output next";
           "Super Comma" = "focus-output previous";
           "Super+Shift Period" = "send-to-output next";
