@@ -2,7 +2,7 @@
 { lib, config, pkgs, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
-  cfg = config.modules.development.freecad
+  cfg = config.modules.development.freecad;
 in {
   options.modules.development.freecad = {
     enable = mkEnableOption "FreeCAD";
