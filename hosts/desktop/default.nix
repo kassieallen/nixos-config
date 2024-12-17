@@ -1,5 +1,5 @@
 # NixOS desktop configuration
-{ config, ... }: {
+{ ... }: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/system
