@@ -2,6 +2,7 @@
 {
   imports = [
     ./config
+    ./development
     ./editing
     ./gaming
     ./envVars.nix

@@ -68,6 +68,9 @@
               map:
                 margin: 10 
                 default: {empty: {}}
+                on-click:
+                  wheel-up: sh -c "pamixer -i 1"
+                  wheel-down: sh -c "pamixer -d 1"
                 conditions:
                   sink_online: {string: {text: "  {sink_percent}%"}}
         - network:

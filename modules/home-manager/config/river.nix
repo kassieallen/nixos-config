@@ -1,7 +1,7 @@
 # Home-manager riverWM configuration
 { pkgs, ... }:
 let
-  wallpaper = "$HOME/Pictures/wallpapers/forest.jpg";
+  wallpaper = "$HOME/Pictures/wallpapers/foggy_forest.jpg";
 in {
   programs.bash = {
     enable = true;

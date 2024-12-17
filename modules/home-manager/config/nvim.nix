@@ -13,7 +13,7 @@
 
   home = {
     packages = [
-      
+      #
     ];
     persistence."/persist/home/kassie".directories = [
       ".local/share/nvim"

@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       format= lib.concatStrings [
-        "[](#9A348E)"
+        "[ ](#9A348E)"
         "$os"
         "$username"
         "[](bg:#DA627D fg:#9A348E)"

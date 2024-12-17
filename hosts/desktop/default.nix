@@ -7,15 +7,19 @@
   ];
 
   home-manager.users.kassie.modules = {
-    gaming = {
-      mcje.enable = true;
-      steam.enable = true;
+    development = {
+      freecad.enable = true;
     };
-    
+
     editing = {
       audacity.enable = true;
       davinci-resolve.enable = true;
       obs.enable = true;
+    };
+
+    gaming = {
+      mcje.enable = true;
+      steam.enable = true;
     };
   };
 }
