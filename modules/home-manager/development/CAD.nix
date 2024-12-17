@@ -1,5 +1,5 @@
 # Home-manager CAD configuration
-{ lib. config, pkgs, ... }: 
+{ lib, config, pkgs, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.development.freecad
