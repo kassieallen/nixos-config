@@ -11,6 +11,12 @@
     graphics = {
       nvidia.enable = true;
     };
+    base-packages.enable = true;
+    fonts.enable = true;
+    networking.enable = true;
+    security.enable = true;
+    sound.enable = true;
+    xdg-portals.enable = true;
   };
 
   # Custom home-manager modules

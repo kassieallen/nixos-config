@@ -2,7 +2,7 @@
 { lib, config, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
-  cfg = config.modules.applications
+  cfg = config.modules.applications.mako;
 in {
   options.modules.applications.mako = {
     enable = mkEnableOption "Mako Notification Daemon";

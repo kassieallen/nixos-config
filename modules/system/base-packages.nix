@@ -1,33 +1,43 @@
 # Base system packages
-{ pkgs, inputs, ... }: {
-  environment = {
-    systemPackages = with pkgs; [
-      polkit_gnome
-      git
-      unzip
-      ripgrep
-      tmux
-    ];
-
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+{ lib, config, pkgs, inputs, ... }:
+let
+  inherit (lib) mkIf mkEnableOption;
+  cfg = config.modules.base-packages;
+in {
+  options.modules.base-packages = {
+    enable = mkEnableOption "Base-system Packages";
   };
 
-  programs = {
-    dconf.enable = true;
-    git.enable = true;
-  };
+  config = mkIf cfg.enable {
+    environment = {
+      systemPackages = with pkgs; [
+        polkit_gnome
+        git
+        unzip
+        ripgrep
+        tmux
+      ];
 
-  services = {
-    gnome = {
-      gnome-keyring.enable = true;
-      # evolution-data-server.enable = true;
-      # gnome-online-accounts.enable = true;
-      # sushi.enable = true;
+      sessionVariables = {
+        EDITOR = "nvim";
+      };
     };
-    gvfs.enable = true;
-    flatpak.enable = true;
-    printing.enable = true;
+
+    programs = {
+      dconf.enable = true;
+      git.enable = true;
+    };
+
+    services = {
+      gnome = {
+        gnome-keyring.enable = true;
+        # evolution-data-server.enable = true;
+        # gnome-online-accounts.enable = true;
+        # sushi.enable = true;
+      };
+      gvfs.enable = true;
+      flatpak.enable = true;
+      printing.enable = true;
+    };
   };
 }

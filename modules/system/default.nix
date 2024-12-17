@@ -13,6 +13,6 @@
     ./sound.nix
     ./time-locale.nix
     ./users.nix
-    ./xdgPortal.nix
+    ./xdg-portals.nix
   ];
 }
