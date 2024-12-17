@@ -3,8 +3,9 @@
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.riverwm;
-
-  wallpaper = "$HOME/Pictures/wallpapers/white_flowers.png";
+  
+  rootPath = ../../../.;
+  wallpaper = "${rootPath}/wallpapers/white_flowers.png";
 in {
   options.modules.applications.riverwm = {
     enable = mkEnableOption "RiverWM";
