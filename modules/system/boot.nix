@@ -32,8 +32,12 @@
     umount /btrfs_tmp
   ''; 
 
-  systemd.tmpfiles.rules = [
-    "d /persist/home/ 0777 root root -" # Owned by root
-    "d /persist/home/kassie/ 0700 kassie users -" # Owned by that user
-  ];
+  systemd = {
+    tmpfiles.rules = [
+      "d /persist/home/ 0777 root root -" # Owned by root
+      "d /persist/home/kassie/ 0700 kassie users -" # Owned by that user
+    ];
+    # To prevent getting stuck at shutdown
+    extraConfig = "DefaultTimeoutStopSec=10s";
+  };
 }

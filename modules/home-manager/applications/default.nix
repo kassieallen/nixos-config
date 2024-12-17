@@ -4,7 +4,6 @@
     ./firefox.nix
     ./foot.nix
     ./fuzzel.nix
-    ./git.nix
     ./mako.nix
     ./nvim.nix
     ./river.nix

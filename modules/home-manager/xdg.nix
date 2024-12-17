@@ -1,6 +1,9 @@
 # Home-manager XDG configuration
-{ pkgs, lib, ... }: with lib;
+{ lib, config, pkgs, ... }: with lib;
 let
+  inherit (lib) mkIf mkEnableOption;
+  cfg = config.modules.xdg-mimes;
+
   defaultApps = {
     audioPlayer = [ "mpv.desktop" ];
     browser = [ "firefox.desktop" ];
@@ -77,19 +80,25 @@ let
     flatten (mapAttrsToList (key: map (type: attrsets.nameValuePair type defaultApps."${key}")) mimeMap)
   );
 in {
-  xdg = { 
-    configFile."mimeapps.list".force = true;
-    mimeApps = {
-      enable = true;
-      associations.added = associations;
-      defaultApplications = associations;
-    };
-    userDirs = {
-      enable = true;
-      desktop = null;
-      templates = null;
-      publicShare = null;
-      createDirectories = true;
+  options.modules.xdg-mimes = {
+    enable = mkEnableOption "XDG-Mimes";
+  };
+
+  config = mkIf cfg.enable {
+    xdg = { 
+      configFile."mimeapps.list".force = true;
+      mimeApps = {
+        enable = true;
+        associations.added = associations;
+        defaultApplications = associations;
+      };
+      userDirs = {
+        enable = true;
+        desktop = null;
+        templates = null;
+        publicShare = null;
+        createDirectories = true;
+      };
     };
   };
 }

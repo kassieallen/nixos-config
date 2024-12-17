@@ -2,5 +2,6 @@
 {
   imports = [
     ./CAD.nix
+    ./git.nix
   ];
 }

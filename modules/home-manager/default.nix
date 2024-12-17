@@ -1,7 +1,7 @@
 # Home-manager default configuration
 {
   imports = [
-    ./config
+    ./applications
     ./development
     ./editing
     ./gaming

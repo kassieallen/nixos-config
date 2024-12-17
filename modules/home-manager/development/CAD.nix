@@ -15,7 +15,10 @@ in {
         prusa-slicer
       ];
       persistence."/persist/home/kassie".directories = [
-        #
+        ".config/FreeCAD"
+        ".config/PrusaSlicer"
+        ".local/share/FreeCAD"
+        ".local/share/prusa-slicer"
       ];
     };
   };
