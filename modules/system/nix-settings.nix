@@ -25,7 +25,7 @@
   # Run unpatched dynamic binaries on NixOS
   programs.nix-ld = {
     enable = true;
-    libraries = with pkgs; [  ];
+    libraries = with pkgs; [ SDL2 ];
   };
   services.dbus.enable = true;
   system.stateVersion = "24.05"; # Probably shouldn't touch this...

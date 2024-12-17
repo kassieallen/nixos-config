@@ -1,5 +1,5 @@
 # Impermanence configuration
-{ config, lib, pkgs, inputs, ... }: {
+{ inputs, ... }: {
   imports = [ inputs.impermanence.nixosModules.impermanence ];
   
   fileSystems."/persist".neededForBoot = true;

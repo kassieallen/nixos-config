@@ -1,5 +1,5 @@
 # Home-manager XDG configuration
-{ lib, config, pkgs, ... }: with lib;
+{ lib, config, ... }: with lib;
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.xdg-mimes;

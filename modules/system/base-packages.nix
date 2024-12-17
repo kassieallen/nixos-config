@@ -1,5 +1,5 @@
 # Base system packages
-{ lib, config, pkgs, inputs, ... }:
+{ lib, config, pkgs, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.base-packages;

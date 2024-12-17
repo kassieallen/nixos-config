@@ -1,5 +1,5 @@
 # Bootloader configuration
-{ config, lib, pkgs, ... }: {
+{ lib, ... }: {
   boot.loader = {
     efi.canTouchEfiVariables = true;
     systemd-boot = {

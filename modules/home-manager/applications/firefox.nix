@@ -1,5 +1,5 @@
 # Home-manager firefox configuration
-{ lib, config, pkgs, ... }:
+{ lib, config, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.firefox;
