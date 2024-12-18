@@ -11,7 +11,7 @@
   
   programs.fuse.userAllowOther = true;
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs username; };
     users.${username} = import ../home-manager;
     useUserPackages = true;
     useGlobalPkgs = true;
