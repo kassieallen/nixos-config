@@ -1,5 +1,5 @@
 # Home-manager CAD configuration
-{ lib, config, pkgs, ... }: 
+{ lib, config, pkgs, username, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.development.freecad;
@@ -14,7 +14,7 @@ in {
         freecad-wayland
         prusa-slicer
       ];
-      persistence."/persist/home/kassie".directories = [
+      persistence."/persist/home/${username}".directories = [
         ".config/FreeCAD"
         ".config/PrusaSlicer"
         ".local/share/FreeCAD"

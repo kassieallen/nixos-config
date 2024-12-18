@@ -1,5 +1,5 @@
 # Bootloader configuration
-{ lib, ... }: {
+{ lib, username, ... }: {
   boot.loader = {
     efi.canTouchEfiVariables = true;
     systemd-boot = {
@@ -35,7 +35,7 @@
   systemd = {
     tmpfiles.rules = [
       "d /persist/home/ 0777 root root -" # Owned by root
-      "d /persist/home/kassie/ 0700 kassie users -" # Owned by that user
+      "d /persist/home/${username}/ 0700 ${username} users -" # Owned by that user
     ];
     # To prevent getting stuck at shutdown
     extraConfig = "DefaultTimeoutStopSec=10s";

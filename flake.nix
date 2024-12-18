@@ -16,16 +16,19 @@
     };
   };
 
-  outputs = { nixpkgs, ... } @inputs: {
+  outputs = { nixpkgs, ... } @inputs:
+  let
+    username = "kassie";
+  in {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs username; };
         modules = [ ./hosts/desktop ];
       };
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs username; };
         modules = [ ./hosts/laptop ];
       };
     };

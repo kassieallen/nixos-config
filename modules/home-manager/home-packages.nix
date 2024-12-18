@@ -1,5 +1,5 @@
 # Home-manager packages
-{ lib, config, pkgs, inputs, ... }:
+{ lib, config, pkgs, inputs, username, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.packages;
@@ -12,8 +12,8 @@ in {
 
   config = mkIf cfg.enable {
     home = {
-      username = "kassie";
-      homeDirectory = "/home/kassie";
+      username = "${username}";
+      homeDirectory = "/home/${username}";
       stateVersion = "24.05";
       packages = with pkgs; [
         # CLI
@@ -34,7 +34,7 @@ in {
         spotify         # Music streaming service
         vesktop         # Discord client
       ];
-      persistence."/persist/home/kassie".directories = [
+      persistence."/persist/home/${username}".directories = [
         ".cache/flatpak"
         ".cache/spotify"
         ".config/spotify"

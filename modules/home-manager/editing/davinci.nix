@@ -1,5 +1,5 @@
 # Home-manager davinci-resolve configuration
-{ lib, config, pkgs, ... }: 
+{ lib, config, pkgs, username, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.editing.davinci-resolve;
@@ -13,7 +13,7 @@ in {
       packages = with pkgs; [
         davinci-resolve
       ];
-      persistence."/persist/home/kassie".directories = [
+      persistence."/persist/home/${username}".directories = [
         #
       ];
     };

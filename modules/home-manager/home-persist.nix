@@ -1,8 +1,8 @@
 # Home-manager impermanence configuration
-{ inputs, ... }: {
+{ inputs, username, ... }: {
   imports = [ inputs.impermanence.homeManagerModules.impermanence ];
 
-  home.persistence."/persist/home/kassie" = {
+  home.persistence."/persist/home/${username}" = {
     directories = [
       "Documents"
       "Downloads"

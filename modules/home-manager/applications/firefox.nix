@@ -1,5 +1,5 @@
 # Home-manager firefox configuration
-{ lib, config, ... }:
+{ lib, config, username, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.firefox;
@@ -82,6 +82,6 @@ in {
         };
       };
     };
-    home.persistence."/persist/home/kassie".directories = [ ".mozilla" ];
+    home.persistence."/persist/home/${username}".directories = [ ".mozilla" ];
   };
 }

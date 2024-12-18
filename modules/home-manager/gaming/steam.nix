@@ -1,5 +1,5 @@
 # Home-manager steam configuration
-{ lib, config, pkgs, ... }: 
+{ lib, config, pkgs, username, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.gaming.steam;
@@ -14,7 +14,7 @@ in {
         steam-tui
         steamcmd
       ];
-      persistence."/persist/home/kassie" = {
+      persistence."/persist/home/${username}" = {
         directories = [
           ".steam"
           ".local/share/Steam"

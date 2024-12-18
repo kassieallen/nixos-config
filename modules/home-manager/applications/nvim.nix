@@ -1,5 +1,5 @@
 # Home-manager neovim configuration
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, username, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.neovim;
@@ -25,8 +25,9 @@ in {
         cargo
         lazygit
         rustc
+        nixfmt-rfc-style
       ];
-      persistence."/persist/home/kassie".directories = [
+      persistence."/persist/home/${username}".directories = [
         ".local/share/nvim"
         ".config/nvim"
       ];

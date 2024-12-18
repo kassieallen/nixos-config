@@ -1,5 +1,5 @@
 # Home-manager git configuration
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, username, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.development.git;
@@ -33,7 +33,7 @@ in {
 
     home = {
       packages = [ pkgs.gh ];
-      persistence."/persist/home/kassie".directories = [ ".config/gh" ];
+      persistence."/persist/home/${username}".directories = [ ".config/gh" ];
     };
   };
 }

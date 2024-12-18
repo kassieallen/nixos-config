@@ -1,5 +1,5 @@
 # Home-manager OBS configuration
-{ lib, config, pkgs, ... }: 
+{ lib, config, pkgs, username, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.editing.obs;
@@ -13,7 +13,7 @@ in {
       packages = with pkgs; [
         obs-studio
       ];
-      persistence."/persist/home/kassie".directories = [
+      persistence."/persist/home/${username}".directories = [
         #
       ];
     };

@@ -1,5 +1,5 @@
 # NixOS desktop configuration
-{ ... }: {
+{ username, ... }: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/system
@@ -20,7 +20,7 @@
   };
 
   # Custom home-manager modules
-  home-manager.users.kassie.modules = {
+  home-manager.users.${username}.modules = {
     applications = {
       firefox.enable = true;
       foot.enable = true;
