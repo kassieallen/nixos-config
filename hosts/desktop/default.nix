@@ -43,7 +43,7 @@
     };
     gaming = {
       mcje.enable = true;
-      steam.enable = true;
+      lutris.enable = true;
     };
     gtk.enable = true;
     packages.enable = true;

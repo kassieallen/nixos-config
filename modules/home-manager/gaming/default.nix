@@ -1,6 +1,6 @@
 {
   imports = [
     ./mcje.nix
-    ./steam.nix
+    ./lutris.nix
   ];
 }

@@ -1,11 +1,11 @@
-# Home-manager steam configuration
+# Home-manager lutris configuration
 { lib, config, pkgs, username, ... }: 
 let
   inherit (lib) mkIf mkEnableOption;
-  cfg = config.modules.gaming.steam;
+  cfg = config.modules.gaming.lutris;
 in {
-  options.modules.gaming.steam = {
-    enable = mkEnableOption "Steam";
+  options.modules.gaming.lutris = {
+    enable = mkEnableOption "Lutris";
   };
 
   config = mkIf cfg.enable {
@@ -13,12 +13,14 @@ in {
       packages = with pkgs; [
         steam-tui
         steamcmd
+        lutris
       ];
       persistence."/persist/home/${username}" = {
         directories = [
-          ".steam"
-          ".local/share/Steam"
-          ".local/share/vulkan"
+          ".cache/lutris"
+          ".local/share/lutris"
+          ".mono"
+          "Games"
         ];
       };
     };
