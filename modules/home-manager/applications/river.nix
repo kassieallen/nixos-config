@@ -28,7 +28,7 @@ in {
       
         for i in $(seq 1 9)
         do
-          tags=$((1 << ($i -1)))
+          tags=$((1 << ($i - 1)))
 
           riverctl map normal Super $i set-focused-tags $tags
           riverctl map normal Super+Shift $i set-view-tags $tags
@@ -45,7 +45,6 @@ in {
           riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 5'
           riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 5'
           riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
-
           riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
           riverctl map $mode None XF86AudioPlay spawn 'playerctl play-pause'
           riverctl map $mode None XF86AudioNext spawn 'playerctl next'
@@ -64,15 +63,15 @@ in {
         ];
         map = {
           normal = {
+            "Control+Alt Delete" = "exit";
+            "None Print" = "spawn 'grim -l 0 -g \"$(slurp)\" - | wl-copy --type image/png'";
             "Super Space" = "spawn 'fuzzel'";
             "Super Return" = "spawn 'foot'";
-            "None Print" = "spawn 'grim -l 0 -g \"$(slurp)\" - | wl-copy --type image/png'";
             "Super C" = "close";
             "Super T" = "toggle-float";
             "Super F" = "toggle-fullscreen";
             "Super E" = "spawn 'foot -e yazi'";
-            "Control+Alt Delete" = "exit";
-
+            
             "Super K" = "focus-view next";
             "Super J" = "focus-view previous";
             "Super+Shift K" = "swap next";

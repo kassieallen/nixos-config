@@ -26,6 +26,7 @@ in {
         gdb             # GNU debugger
         hexdump         # Hex tool
         mpv             # Media player
+        usbutils        # USB utilities and tools
         xxd             # Hex-dump binaries and back again!
         yt-dlp          # Audio/video downloader
 

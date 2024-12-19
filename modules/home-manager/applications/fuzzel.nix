@@ -11,10 +11,9 @@ in {
   config = mkIf cfg.enable {
     home.file.".config/fuzzel/fuzzel.ini".text = ''
       font=JetBrainsMono Nerd Font
-      prompt=
+      prompt="> "
       icon-theme=Adwaita
       icons-enabled=yes
-      fuzzy=yes
 
       lines=10
       width=50
