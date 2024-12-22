@@ -1,5 +1,5 @@
 # Home-manager yazi configuration
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.yazi;
@@ -9,9 +9,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.file.".config/yazi/yazi.toml".text = ''
-      [manager]
-      show_hidden = true
-    '';
+    home = {
+      packages = [ pkgs.yazi ];
+      file.".config/yazi/yazi.toml".text = ''
+        [manager]
+        show_hidden = true
+      '';
+    };
   };
 }

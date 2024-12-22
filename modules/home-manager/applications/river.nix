@@ -110,18 +110,13 @@ in {
     };
 
     home.packages = with pkgs; [
-      foot
-      fuzzel
       grim
       libnotify
-      mako
       pamixer
       playerctl
       slurp
       swww
       wl-clipboard
-      yambar
-      yazi
       zenity
     ];
   };

@@ -8,6 +8,7 @@
     ./nvim.nix
     ./river.nix
     ./starship.nix
+    ./waybar.nix
     ./yambar.nix
     ./yazi.nix
   ];

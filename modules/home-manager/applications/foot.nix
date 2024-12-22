@@ -1,5 +1,5 @@
 # Home-manager foot configuration
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.foot;
@@ -9,6 +9,7 @@ in {
   };
 
   config = mkIf cfg.enable {
+    home.packages = [ pkgs.foot ];
     programs.foot = {
       enable = true;
       settings = {
