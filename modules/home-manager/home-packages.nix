@@ -20,7 +20,7 @@ in {
         appimage-run    # AppImage compatibility
         btop            # Resource monitor
         cbonsai         # Pretty tree :3
-        fastfetch       # System information tool
+        nitch           # System information tool
         feh             # Image viewer
         gcc             # GNU C compiler
         gdb             # GNU debugger

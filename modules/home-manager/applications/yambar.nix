@@ -3,6 +3,29 @@
 let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.modules.applications.yambar;
+
+  musicPlayer = pkgs.writeShellScriptBin "musicPlayer.sh" ''
+    #!/usr/bin/env bash
+    while true; do
+      if [[ "$(playerctl -l 2>&1)" == "spotify" ]]; then
+        case "$(playerctl metadata -f '{{status}}')" in
+          Playing) SONG=" $(playerctl metadata -f "{{artist}} - {{title}}")"
+          ;;
+          Paused) SONG=$(printf -- '%s\n' " - Paused")
+          ;;
+          *) SONG=$(printf -- '%s\n' "")
+          ;;
+        esac
+        printf -- '%s\n' "SONG|string|$SONG"
+        printf -- '%s\n' ""
+        sleep 0.5
+        else
+          printf -- '%s\n' "SONG|string| "
+          printf -- '%s\n' ""
+          sleep 5
+      fi
+    done
+  '';
 in {
   options.modules.applications.yambar = {
     enable = mkEnableOption "Yambar";
@@ -34,7 +57,6 @@ in {
                       default: {string: {text: "{id}", font: *jbm}}
                       conditions:
                         id == 16: {string: {text: "󱓧", font: *jbm}}
-
                 content:
                   map:
                     on-click:
@@ -65,14 +87,17 @@ in {
                         map:
                           <<: *river_base
                           deco: {underline: {size: 2, color: 2a2a2dff}}
-          center:
             - foreign-toplevel:
                 content:
                   map:
                     conditions:
                       ~activated: {empty: {}}
                       activated:
-                        - string: {text: "{title}", foreground: aca1cfff}
+                        - string: {text: "{title}", max: 40, foreground: aca1cfff}
+          center:
+            - script:
+                path: ${musicPlayer}/bin/musicPlayer.sh
+                content: {string: {text: "{SONG}", foreground: 90b99fff}}
           right:
             - pulse:
                 content:
