@@ -41,7 +41,7 @@ in {
         ".config/spotify"
         ".config/vesktop" 
         ".local/share/flatpak"
-        ".var/app/io.mrarm.mcpelauncher"
+        ".var/app/"
       ];
     };
 
@@ -55,6 +55,7 @@ in {
       ];
       packages = [
         "io.mrarm.mcpelauncher"
+        "io.github.everestapi.Olympus"
       ];
     };
   };

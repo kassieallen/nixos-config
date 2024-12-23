@@ -11,6 +11,7 @@
     ./nix-settings.nix
     ./security.nix
     ./sound.nix
+    ./steam.nix
     ./time-locale.nix
     ./users.nix
     ./xdg-portals.nix
